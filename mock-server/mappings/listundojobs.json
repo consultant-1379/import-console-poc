@@ -1,0 +1,122 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/configuration/jobs",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/hal+json"
+      }
+    }
+
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "jobs": [
+        {
+          "_links": {
+            "self": {
+              "href": "/configuration/jobs/27360?type=UNDO_IMPORT_TO_LIVE"
+            }
+          },
+          "id": 27360,
+          "status": "COMPLETED",
+          "statusReason": "COMPLETED",
+          "type": "UNDO_IMPORT_TO_LIVE",
+          "creationTime": "2017-07-20T17:03:31.593",
+          "startTime": "2017-07-20T17:03:31.593",
+          "endTime": "2017-07-20T17:03:31.765",
+          "lastUpdateTime": "2017-07-20T17:03:31.765",
+          "userId": "administrator",
+          "jobId": "1",
+          "undoOperations": 1,
+          "totalOperations": 1,
+          "fileUri": "/configuration/PZcVUIcLCYUEdfGZUWTRBPacTTVIHDAundo_2017-07-20T17-03-31_27360.txt"
+        },
+        {
+          "_links": {
+            "self": {
+              "href": "/configuration/jobs/6861?type=UNDO_ACTIVATE_CONFIGURATION"
+            }
+          },
+          "id": 6861,
+          "status": "FAILED",
+          "statusReason": "Failed to read configuration management history.",
+          "type": "UNDO_ACTIVATE_CONFIGURATION",
+          "creationTime": "2017-07-10T14:15:10.635",
+          "startTime": "2017-07-10T14:15:10.635",
+          "endTime": "2017-07-10T14:15:21.598",
+          "lastUpdateTime": "2017-07-10T14:15:21.598",
+          "userId": "administrator",
+          "jobId": "4858",
+          "undoOperations": 0,
+          "totalOperations": 0
+        },
+        {
+          "_links": {
+            "self": {
+              "href": "/configuration/jobs/6856?type=UNDO_IMPORT_TO_LIVE"
+            }
+          },
+          "id": 6856,
+          "status": "COMPLETED",
+          "statusReason": "COMPLETED",
+          "type": "UNDO_IMPORT_TO_LIVE",
+          "creationTime": "2017-07-10T14:14:55.219",
+          "startTime": "2017-07-10T14:14:55.219",
+          "endTime": "2017-07-10T14:14:55.336",
+          "lastUpdateTime": "2017-07-10T14:14:55.336",
+          "undoOperations": 0,
+          "totalOperations": 0,
+          "fileUri": "/configuration/PZcVUIcLCYUEdfGZUWTRBPacTTVIHDAundo_2017-07-19T08-37-53_10326.txt"
+        },
+        {
+          "_links": {
+            "self": {
+              "href": "/configuration/jobs/7355?type=UNDO_IMPORT_TO_LIVE"
+            }
+          },
+          "id": 7355,
+          "status": "FAILED",
+          "statusReason": "DPS not available.",
+          "type": "UNDO_IMPORT_TO_LIVE",
+          "creationTime": "2017-07-10T14:31:29.926",
+          "startTime": "2017-07-10T14:31:29.926",
+          "endTime": "2017-07-10T14:31:29.978",
+          "lastUpdateTime": "2017-07-10T14:31:29.978",
+          "userId": "administrator",
+          "jobId": "Value not set",
+          "undoOperations": 0,
+          "totalOperations": 0
+        },
+        {
+          "_links": {
+            "self": {
+              "href": "/configuration/jobs/7355?type=UNDO_IMPORT_TO_LIVE"
+            }
+          },
+          "id": 7355,
+          "status": "FAILED",
+          "statusReason": "DPS not available.",
+          "type": "UNDO_IMPORT_TO_LIVE",
+          "creationTime": "2017-07-10T14:31:29.926",
+          "startTime": "2017-07-10T14:31:29.926",
+          "endTime": "2017-07-10T14:31:29.978",
+          "lastUpdateTime": "2017-07-10T14:31:29.978",
+          "userId": "administrator",
+          "jobId": "1",
+          "undoOperations": 0,
+          "totalOperations": 0
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/hal+json"
+    }
+  }
+}

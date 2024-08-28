@@ -1,0 +1,39 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/bulk-configuration/v1/import-jobs/jobs/([0-9]+)/invocations",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$.validationPolicy"
+    }, {
+      "matchesJsonPath" : "$.executionPolicy"
+    }, {
+      "matchesJsonPath" : "$.flow"
+    } ]
+  },
+  "response": {
+    "status": 202,
+    "jsonBody":
+    {
+      "flow" : "validate-and-execute",
+      "validationPolicy": [ "no-instance-validation"],
+      "executionPolicy": ["stop-on-error"],
+      "_links" : [{
+          "job": {
+            "href": "/bulk-configuraton/v1/import-jobs/job/1"
+          }
+        }]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

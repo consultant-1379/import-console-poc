@@ -1,0 +1,82 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/bulk-configuration/v1/import-jobs/jobs/([0-9]+)",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "id": 1,
+      "name": "1499320002766_modify_SgsnFunction_SGSN-16A-CP01-V101xml",
+      "status": "executing",
+      "created": "2017-05-29T23:20:10.52Z",
+      "lastValidation": "2017-05-29T23:20:30.52Z",
+      "lastExecution": "2017-05-29T23:20:50.52Z",
+      "totalElapsedTime": 49,
+      "validationPolicy": ["instance-validation"],
+      "executionPolicy": ["continue-on-error-node", "execute-all-valid"],
+      "summary": {
+        "total": {
+          "type": "total",
+          "parsed": 100,
+          "valid": 100,
+          "invalid": 0,
+          "executed": 100,
+          "executionErrors": 0
+        },
+        "created": {
+          "type": "created",
+          "parsed": 1,
+          "valid": 1,
+          "invalid": 0,
+          "executed": 1,
+          "executionErrors": 0
+        },
+        "update": {
+          "type": "updated",
+          "parsed": 99,
+          "valid": 94,
+          "invalid": 0,
+          "executed": 49,
+          "executionErrors": 0
+        }
+      },
+      "files": [{
+        "id": 12232,
+        "name": "modify.xml",
+        "type": "3GPP"
+      }],
+      "_links": {
+        "files": {
+          "rel": "files",
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1/files"
+        },
+        "self": {
+          "rel": "self",
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1"
+        },
+        "operations": {
+          "rel": "operations",
+          "href" : "/bulk-configuration/v1/import-jobs/jobs/1/operations"
+        },
+        "invocations": {
+          "rel": "job-invocation",
+          "href" : "/bulk-configuration/v1/import-jobs/jobs/1/invocations"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

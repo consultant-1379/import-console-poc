@@ -1,0 +1,14 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/loginsss"
+  },
+  "response": {
+    "status": 200,
+    "body": "",
+    "headers": {
+      "x-autherrorcode": "1"
+    }
+  }
+}

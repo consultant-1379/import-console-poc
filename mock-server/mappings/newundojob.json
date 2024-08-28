@@ -1,0 +1,33 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/configuration/jobs",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/hal+json"
+      }
+    }
+
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "id": 2,
+      "status": "STARTING",
+      "type": "UNDO_IMPORT_TO_LIVE",
+      "_links": {
+        "self": {
+          "href":"/configuration/jobs/2?type=UNDO_IMPORT_TO_LIVE"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/hal+json"
+    }
+  }
+}

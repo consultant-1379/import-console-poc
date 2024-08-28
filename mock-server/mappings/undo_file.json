@@ -1,0 +1,14 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/configuration/([a-zA-Z0-9_-]+)\\.txt"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "a_undo_import_file.txt",
+    "headers": {
+      "Content-Type": "application/octet-stream"
+    }
+  }
+}

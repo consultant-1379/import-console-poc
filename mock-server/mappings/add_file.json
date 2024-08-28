@@ -1,0 +1,34 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/bulk-configuration/v1/import-jobs/jobs/([0-9]+)/files",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "multipart/form-data"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "jsonBody": {
+      "name": "my-import-file.xml",
+      "format": "3GPP",
+      "_links": {
+        "self": {
+          "href": "/bulk-configuraton/v1/import-jobs/files/567"
+        },
+        "invocations": {
+          "rel": "invocations",
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1/invocations"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

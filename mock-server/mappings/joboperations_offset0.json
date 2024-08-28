@@ -1,0 +1,80 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/bulk-configuration/v1/import-jobs/jobs/([0-9]+)/operations",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "totalCount": 3,
+      "operations": [{
+        "type": "create",
+        "fdn": "MeContext=LTE01ERBS00003,ManagedElement=1,ENodeBFunction=17",
+        "state": "executed",
+        "_links": {
+          "self": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/17"
+          },
+          "attributes": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/17/attributes"
+          }
+        }
+      }, {
+        "type": "delete",
+        "fdn": "MeContext=LTE01ERBS00003,ManagedElement=1,ENodeBFunction=18",
+        "state": "executed",
+        "_links": {
+          "self": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/18"
+          },
+          "attributes": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/18/attributes"
+          }
+        }
+      }, {
+        "type": "update",
+        "fdn": "MeContext=LTE01ERBS00003,ManagedElement=1,ENodeBFunction=19",
+        "state": "execution-error",
+        "_links": {
+          "self": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/19"
+          },
+          "attributes": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/19/attributes"
+          }
+        }
+      }, {
+        "type": "update",
+        "fdn": "MeContext=LTE01ERBS00003,ManagedElement=1,ENodeBFunction=20",
+        "state": "execution-skipped",
+        "_links": {
+          "self": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/20"
+          },
+          "attributes": {
+            "href": "/bulk-configuraton/v1/import-jobs/operations/20/attributes"
+          }
+        }
+      }],
+      "_links": {
+        "self": {
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1/operations"
+        }
+      }
+
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

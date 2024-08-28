@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/login",
+    "bodyPatterns": [
+      {
+        "contains": "IDToken1=admin"
+      }, {
+        "contains": "IDToken2=123"
+      }]
+  },
+  "response": {
+    "status": 200,
+    "body": "",
+    "headers": {
+      "x-autherrorcode": "0",
+      "Set-Cookie": "iPlanetDirectoryPro=10000"
+    }
+  }
+}

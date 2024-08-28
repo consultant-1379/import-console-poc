@@ -1,0 +1,52 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/bulk-configuration/v1/import-jobs/jobs",
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$.validationPolicy"
+    }, {
+      "matchesJsonPath" : "$.executionPolicy"
+    } ]
+  },
+  "response": {
+    "status": 201,
+    "jsonBody": {
+      "id": 1,
+      "userId": "abcdef",
+      "name": "test",
+      "validationPolicy": ["no-instance-validation"],
+      "executionPolicy": ["stop-on-error"],
+      "created": "2017-05-29T23:20:50.52Z",
+      "_links": {
+        "files": {
+          "rel": "files",
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1/files"
+        },
+        "self": {
+          "rel": "self",
+          "href": "/bulk-configuration/v1/import-jobs/jobs/1"
+        },
+        "operations": {
+          "rel": "operations",
+          "href" : "/bulk-configuration/v1/import-jobs/jobs/1/operations"
+        },
+        "invocations": {
+          "rel": "job-invocation",
+          "href" : "/bulk-configuration/v1/import-jobs/jobs/1/invocations"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

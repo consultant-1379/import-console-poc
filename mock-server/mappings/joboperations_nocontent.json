@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/bulk-configuration/v1/import-jobs/jobs/([0-9]+)/operations",
+    "queryParameters" : {
+      "offset": {
+        "matches": "0*[1-9]+0*"
+      }
+    }
+  },
+  "response": {
+    "status": 204,
+    "body": "",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

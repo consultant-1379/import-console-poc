@@ -1,0 +1,8 @@
+.idea/
+build/
+dist/
+import_console.egg-info/
+*.pyc
+*.log
+*.zip
+*.iml

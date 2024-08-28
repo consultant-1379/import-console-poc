@@ -1,0 +1,35 @@
+{
+  "priority": 6,
+  "request": {
+    "method": "GET",
+    "urlPath": "/bulk-configuration/v1/import-jobs/jobs",
+    "queryParameters" : {
+      "offset" : {
+        "equalTo" : "0"
+      },
+      "id":{
+        "matches": ".+"
+      }
+    },
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    }
+
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "totalCount": 0,
+      "jobs": []
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/bulk-configuraton/v1/import-jobs/operations/([0-9]+)/attributes"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "totalCount": 3,
+      "attributes": [{
+        "name": "sectorFunctionRef",
+        "value": "MeContext=LTE01ERBS00003,ManagedElement=1,ENodeBFunction=18"
+      } ,{
+        "name": "frequency",
+        "value": "10"
+      }],
+      "_links": {
+        "self": {
+          "href": "/bulk-configuraton/v1/import-jobs/operations/18/attributes"
+        }
+      }
+
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

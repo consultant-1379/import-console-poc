@@ -1,0 +1,136 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/bulk-configuration/v1/import-jobs/jobs",
+    "queryParameters" : {
+      "offset" : {
+        "equalTo" : "0"
+      },
+      "id":{
+        "absent": true
+      }
+    },
+    "headers" : {
+      "Accept" : {
+        "contains" : "json"
+      },
+      "Content-Type": {
+        "contains" : "application/json"
+      }
+    }
+
+  },
+  "response": {
+    "status": 200,
+    "jsonBody":
+    {
+      "totalCount": 2,
+      "jobs": [{
+        "id": 1,
+        "name": "1499320002766_modify_SgsnFunction_SGSN-16A-CP01-V101xml",
+        "status": "executed",
+        "created": "2017-05-29T23:20:10.52Z",
+        "lastValidation": "2017-05-29T23:20:30.52Z",
+        "lastExecution": "2017-05-29T23:20:50.52Z",
+        "totalElapsedTime": 49,
+        "validationPolicy": ["instance-validation"],
+        "executionPolicy": ["continue-on-error-node"],
+        "summary": {
+          "total": {
+            "type": "total",
+            "parsed": 100,
+            "valid": 95,
+            "invalid": 5,
+            "executed": 50,
+            "executionErrors": 45
+          },
+          "created": {
+            "type": "created",
+            "parsed": 1,
+            "valid": 1,
+            "invalid": 0,
+            "executed": 1,
+            "executionErrors": 0
+          },
+          "update": {
+            "type": "updated",
+            "parsed": 99,
+            "valid": 94,
+            "invalid": 5,
+            "executed": 49,
+            "executionErrors": 45
+          }
+        },
+        "_links": {
+          "files": {
+            "rel": "files",
+            "href": "/bulk-configuration/v1/import-jobs/jobs/1/files"
+          },
+          "self": {
+            "rel": "self",
+            "href": "/bulk-configuration/v1/import-jobs/jobs/1"
+          },
+          "operations": {
+            "rel": "operations",
+            "href" : "/bulk-configuration/v1/import-jobs/jobs/1/operations"
+          },
+          "invocations": {
+            "rel": "job-invocation",
+            "href" : "/bulk-configuration/v1/import-jobs/jobs/1/invocations"
+          }
+        }
+      }, {
+        "id": 2,
+        "name": "1496457002766_modify_V102xml",
+        "status": "executing",
+        "created": "2017-05-29T23:20:10.52Z",
+        "lastValidation": "2017-05-29T23:20:30.52Z",
+        "lastExecution": "",
+        "totalElapsedTime": 49,
+        "validationPolicy": ["instance-validation"],
+        "executionPolicy": ["stop-on-error",
+          "stop-not-all-valid"],
+        "summary": {
+          "total": {
+            "type": "total",
+            "parsed": 100,
+            "valid": 95,
+            "invalid": 0,
+            "executed": 50,
+            "executionErrors": 0
+          },
+          "created": {
+            "type": "created",
+            "parsed": 1,
+            "valid": 0,
+            "invalid": 0,
+            "executed": 1,
+            "executionErrors": 0
+          },
+          "update": {
+            "type": "update",
+            "parsed": 99,
+            "valid": 5,
+            "invalid": 0,
+            "executed": 49,
+            "executionErrors": 0
+          }
+        },
+        "_links": {
+          "files": {
+            "rel": "files",
+            "href": "/bulk-configuration/v1/import-jobs/jobs/2/files"
+          },
+          "self": {
+            "rel": "self",
+            "href": "/bulk-configuration/v1/import-jobs/jobs/2"
+          }
+        }
+      }]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/bulk-configuration/v1/import-jobs/jobs"
+  },
+  "response": {
+    "status": 204,
+    "body": "",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
